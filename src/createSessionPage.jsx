@@ -1,9 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import Navbar from '../components/Navbar';
-import VideoBackground from '../components/VideoBackground';
-
 export default function CreateSessionPage() {
   const [name, setName] = useState('');
   const [dateTime, setDateTime] = useState('');
@@ -49,9 +46,7 @@ export default function CreateSessionPage() {
 
   return (
     <>
-      <Navbar />
 
-      <VideoBackground />
 
       <div className="content">
         <h1>CREATE A SESSION</h1>

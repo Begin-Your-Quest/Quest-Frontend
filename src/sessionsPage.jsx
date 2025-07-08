@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import Navbar from '../components/Navbar';
-import VideoBackground from '../components/VideoBackground';
+
 
 export default function SessionsPage() {
   const [sessions, setSessions] = useState([]);
@@ -17,8 +16,6 @@ export default function SessionsPage() {
 
   return (
     <>
-      <Navbar />
-      <VideoBackground />
 
       <div className="content">
         <h1>SESSIONS</h1>
