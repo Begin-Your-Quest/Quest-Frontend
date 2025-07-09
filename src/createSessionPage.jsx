@@ -9,6 +9,7 @@ export default function CreateSessionPage() {
   const [newPlayer, setNewPlayer] = useState('');
   const navigate = useNavigate();
 
+
   const handleAddPlayer = () => {
     if (newPlayer.trim()) {
       setPlayers(prev => [...prev, newPlayer.trim()]);
@@ -82,6 +83,7 @@ export default function CreateSessionPage() {
           </label>
 
           <div className="add-player-section">
+
             <label>
               Add Player by Username
               <input
@@ -104,7 +106,6 @@ export default function CreateSessionPage() {
                   onClick={() => handleRemovePlayer(idx)}
                   className="btn remove-player"
                 >
-                  ×
                 </button>
               </li>
             ))}
