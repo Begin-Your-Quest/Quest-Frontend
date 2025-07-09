@@ -24,6 +24,10 @@ return (
 
 function SkillListItem({ skill }) {
   return (
-    <li
-  )
+    <li>
+      <p>
+        <Link to ={"/skills/" + skill.id}>{skill.name}</Link>
+      </p>
+    </li>
+  );
 }
