@@ -1,4 +1,5 @@
 import useQuery from '../api/useQuery';
+import { Link } from 'react-router';
 
 const Sessions = () => {
   const { data: allSessions } = useQuery(`/sessions`, `sessions`);
@@ -6,21 +7,19 @@ const Sessions = () => {
     <>
       <h1>Sessions</h1>
       <h3>Your Stored Sessions:</h3>
-      <ul>
-        {
-          allSessions &&
+      {
+        allSessions &&
 
-          allSessions.map((session) => {
-            return (
-              <>
-                <li>{session.name}</li>
-                <li>{session.date}</li>
-                <br></br>
-              </>
-            )
-          })
-        }
-        </ul>
+        allSessions.map((session) => {
+          console.log(session)
+          return (
+            <Link to={`/sessions/${session.id}`}>
+              <h3>{session.name}</h3>
+            </Link>
+          )
+        })
+      }
+      <button>CREATE A NEW SESSION</button> 
     </>
   )
 }
