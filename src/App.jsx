@@ -1,13 +1,13 @@
-import { Routes, Route } from "react-router-dom";
-import Layout from "./layout/Layout";
-import HomePage from "./pages/HomePage"; 
-import Login from "./auth/Login";
-import Register from "./auth/Register";
-import SessionsPage from "./sessions/SessionsPage";
-import CreateSessionPage from "./sessions/CreateSessionPage";
-import { AllCharacters } from "./characters/AllCharacters";
-import { OneCharacter } from "./characters/OneCharacter";
-import { NewCharacter } from "./characters/NewCharacter";
+import { Routes, Route } from "react-router";
+import Layout from "./layout/Layout.jsx";
+import HomePage from "./homepage.jsx"; 
+import Login from "./auth/Login.jsx";
+import Register from "./auth/Register.jsx";
+import SessionsPage from "./sessions/sessionsPage.jsx";
+import CreateSessionPage from "./sessions/createSessionPage.jsx";
+import { AllCharacters } from "./characters/AllCharacters.jsx";
+import { OneCharacter } from "./characters/OneCharacter.jsx";
+import { NewCharacter } from "./characters/NewCharacter.jsx";
 
 export default function App() {
   return (
