@@ -1,6 +1,9 @@
 {
   "name": "BeginYourQuest",
   "type": "module",
+  "imports": {
+    "#*": "./*.js"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -8,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@faker-js/faker": "^9.9.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router": "^7.6.0"
