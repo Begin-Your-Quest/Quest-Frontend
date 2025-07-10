@@ -1,5 +1,6 @@
 import useQuery from '../api/useQuery';
 import { Link } from 'react-router';
+import SessionCreateForm from './SessionCreateForm';
 
 const Sessions = () => {
   const { data: allSessions } = useQuery(`/sessions`, `sessions`);
@@ -11,7 +12,6 @@ const Sessions = () => {
         allSessions &&
 
         allSessions.map((session) => {
-          //console.log(session)
           return (
             <Link to={`/sessions/${session.id}`}>
               <h3>{session.name}</h3>
@@ -19,7 +19,8 @@ const Sessions = () => {
           )
         })
       }
-      <button>CREATE A NEW SESSION</button> 
+      <h2>Create a New Session</h2> 
+      <SessionCreateForm />
     </>
   )
 }
