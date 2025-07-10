@@ -11,7 +11,7 @@ const Sessions = () => {
         allSessions &&
 
         allSessions.map((session) => {
-          console.log(session)
+          //console.log(session)
           return (
             <Link to={`/sessions/${session.id}`}>
               <h3>{session.name}</h3>
@@ -24,4 +24,4 @@ const Sessions = () => {
   )
 }
 
-export default Sessions;
+export default Sessions  ;
