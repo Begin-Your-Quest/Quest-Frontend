@@ -10,10 +10,6 @@ export default function HomePage() {
       <div className="content">
         <h1>Welcome Adventurers!!</h1>
         <p>Begin Your Quest...</p>
-
-        <button onClick={() => navigate('/sessions')} className="btn">
-          View Sessions
-        </button>
       </div>
     </>
   );
