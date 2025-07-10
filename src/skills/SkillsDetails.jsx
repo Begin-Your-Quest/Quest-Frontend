@@ -17,6 +17,7 @@ return (
     <h1>{skill.name}</h1>
     <p>{skill.magicPoints}</p>
     <p>{skill.damage}</p>
+    <p>{skill.description}</p>
   </>
   );
 }
