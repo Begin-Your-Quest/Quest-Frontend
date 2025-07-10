@@ -1,11 +1,32 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Begin Your Quest</title>
+    
   </head>
   <body>
+    <!-- FULL-SCREEN VIDEO BACKGROUND -->
+    <video
+      class="bg-video"
+      autoplay
+      muted
+      loop
+      playsinline
+    >
+      <source src="/media/Bg-video.mp4" type="video/mp4" />
+    </video>
+
+    <!-- LOOPING BACKGROUND MUSIC -->
+    <audio
+      class="bg-audio"
+      src="/media/BGaudio.mp3"
+      autoplay
+      loop
+    ></audio>
+
+    <!-- THIS IS WHERE REACT MOUNTS -->
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
