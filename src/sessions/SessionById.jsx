@@ -6,7 +6,6 @@ import SessionUpdateForm from "./SessionUpdateForm";
 const SessionById = () => {
   const { id } = useParams();
   const { data: session } = useQuery(`/sessions/${id}`, `session`);
-  //console.log(session)
   if(!session) return null
   return (
     <>

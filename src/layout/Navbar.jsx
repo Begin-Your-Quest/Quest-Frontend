@@ -6,9 +6,9 @@ export default function Navbar() {
   const { token, logout } = useAuth();
   return (
     <header id="navbar">
-      <NavLink id="brand" to="/">
-        <p>A Quest Begins</p>
-      </NavLink>
+     <NavLink to="/" className="brand">
+       <img src="/media/BYQlogo.png" alt="Begin Your Quest Logo" className="brand-logo" />
+     </NavLink>
       <nav>
         {token ? (
           <>
