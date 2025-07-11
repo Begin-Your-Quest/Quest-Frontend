@@ -25,6 +25,8 @@ html, body, #root {
   height: 100%;
   font: 16px/1.5 Arial, sans-serif;
   color: #000;
+  z-index:  0; 
+  position: relative;
 }
 
 /* Video & audio */
