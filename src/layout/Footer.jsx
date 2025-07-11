@@ -6,6 +6,8 @@ export default function Footer() {
         <a href="/about">About</a>
         <a href="/privacy">Privacy</a>
         <a href="/contact">Contact</a>
+        <a href="https://github.com/Begin-Your-Quest">GitHub</a>
+        <a href="/Discord">Discord</a>
       </nav>
     </footer>
   )

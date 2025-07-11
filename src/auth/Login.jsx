@@ -3,7 +3,6 @@ import { Link, useNavigate } from "react-router";
 
 import { useAuth } from "./AuthContext";
 
-/** A form that allows users to log into an existing account. */
 export default function Login() {
   const { login } = useAuth();
   const navigate = useNavigate();
@@ -22,21 +21,39 @@ export default function Login() {
   };
 
   return (
-    <>
-      <h1>Log in to your account</h1>
-      <form action={onLogin}>
-        <label>
-          Username
-          <input type="username" name="username" required />
-        </label>
-        <label>
-          Password
-          <input type="password" name="password" required />
-        </label>
-        <button>Login</button>
-        {error && <output>{error}</output>}
-      </form>
-      <Link to="/register">Need an account? Register here.</Link>
-    </>
+    <div className="auth-page">
+      <div className="auth-card">
+        <h1 className="auth-title">Log in to your account</h1>
+        <form className="auth-form" action={onLogin}>
+          <label className="auth-label">
+            Username
+            <input
+              className="auth-input"
+              type="text"
+              name="username"
+              required
+            />
+          </label>
+          <label className="auth-label">
+            Password
+            <input
+              className="auth-input"
+              type="password"
+              name="password"
+              required
+            />
+          </label>
+          <button type="submit" className="auth-button">
+            Login
+          </button>
+          {error && <output className="auth-error">{error}</output>}
+        </form>
+        <p className="auth-footer">
+          <Link className="auth-link" to="/register">
+            Need an account? Register here.
+          </Link>
+        </p>
+      </div>
+    </div>
   );
-}
+ }
