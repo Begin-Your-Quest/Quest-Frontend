@@ -6,12 +6,9 @@ const SessionUpdateForm = ({ session }) => {
   const { id } = useParams();
   const { mutate } = useMutation(`PUT`, `/sessions/${id}`, [`session`]);
   
-  console.log(session)
   const updateSession = async (formData) => {
     const name = formData.get("name");
     const date = formData.get("date");
-    console.log(name);
-    console.log(date);
     mutate({name, date});
   };
 

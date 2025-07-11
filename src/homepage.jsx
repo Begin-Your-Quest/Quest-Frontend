@@ -12,6 +12,7 @@ export default function HomePage() {
     "/media/WarriorImg.png",
   ];
 
+  mediaCss
   return (
     <div className="content">
 
@@ -20,6 +21,11 @@ export default function HomePage() {
         <button onClick={() => navigate('/sessions')} className="btn">
           View Sessions
         </button>
+
+      <div className="content">
+        <h1>Welcome Adventurers!!</h1>
+        <p>Begin Your Quest...</p>
+main
       </div>
 
       <div className="page-box">
