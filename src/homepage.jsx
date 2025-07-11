@@ -11,12 +11,11 @@ export default function HomePage() {
     "/media/RogueImg.png",
     "/media/WarriorImg.png",
   ];
-  
+
   return (
     <div className="content">
       <div className="page-box">
-        <h1>Welcome Adventurers!!</h1>
-        <p>Begin Your Quest...</p>
+        <h1>Welcome Adventurers</h1>
         <button onClick={() => navigate('/sessions')} className="btn">
           View Sessions
         </button>
