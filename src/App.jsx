@@ -25,7 +25,8 @@ export default function App() {
           <Route path="/sessions/new" element={<CreateSessionPage />} />
           <Route path="/characters" element={<AllCharacters />}/>
           <Route path="/characters/:id" element={<OneCharacter />}/>
-           <Route path="/characters/:id/edit" element={<EditCharacterForm />}/>
+          <Route path="/characters/:id/edit" element={<EditCharacterForm />}/>
+          <Route path="/characters/:id/edit" element={<EditCharacterForm />}/>
           <Route path="/characters/new" element={<NewCharacter />}/>
           <Route path="/skills/list" element={<SkillsList />}/>
           <Route path="*" element={<p>Page not found</p>} />
