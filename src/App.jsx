@@ -9,7 +9,7 @@ import { OneCharacter } from "./characters/OneCharacter.jsx";
 import { NewCharacter } from "./characters/NewCharacter.jsx";
 import Sessions from "./sessions/sessions";
 import SessionById from "./sessions/SessionById.jsx";
-import { SkillsList } from "./skills/skillsList.jsx";
+import  SkillsList  from "./skills/skillsList.jsx";
 import { EditCharacterForm } from "./characters/EditCharacterForm.jsx";
 
 

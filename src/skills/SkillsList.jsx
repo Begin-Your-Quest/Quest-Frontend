@@ -2,7 +2,7 @@ import { Link } from "react-router";
 import useQuery from "../api/useQuery"
 
 
-export default function SkillList() {
+export default function SkillsList() {
   const {
     data: skills,
     loading,
