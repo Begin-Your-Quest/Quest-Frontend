@@ -14,6 +14,9 @@ export default function HomePage() {
         <button onClick={() => navigate('/sessions')} className="btn">
           View Sessions
         </button>
+        <button onClick={() => navigate('/characters')} className="btn">
+          View Characters
+        </button>
       </div>
     </>
   );
