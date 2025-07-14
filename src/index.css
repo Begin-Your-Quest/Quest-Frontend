@@ -1,0 +1,174 @@
+/* Use Press Start 2P for your main headings */
+h1, .hero-title {
+  font-family: 'Press Start 2P', cursive;
+}
+
+/* Everything else can stay Montserrat (or your default) */
+body, p, button, input, label, nav a {
+  font-family: 'Montserrat', sans-serif;
+}
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Press+Start+2P&display=swap');
+
+/* Use a consistent color palette */
+:root { 
+  --primary-color: #f6c23e; /* Gold */
+  --secondary-color: #2f2f2f; /* Dark Gray */
+  --text-color: #333; /* Dark Text */
+  --background-color: rgba(255, 255, 255, 0.85); /* Light Background */
+}
+
+/* Base & root */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font: 16px/1.5 Arial, sans-serif;
+  color: #000;
+  z-index:  0; 
+  position: relative;
+}
+
+/* Video & audio */
+.bg-video {
+  position: fixed;
+  top: 50%; left: 50%;
+  min-width: 100%; min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -1;
+}
+.bg-audio {
+  display: none;
+}
+
+/* Navbar */
+#navbar {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: #2f2f2f;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  z-index: 2;
+}
+.brand-logo {
+  height: 3rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.brand-logo:hover {
+  transform: scale(1.05);
+}
+.brand-logo:focus {
+  outline: 2px solid #f6c23e;
+  outline-offset: 2px;
+}
+#navbar nav {
+  margin-left: auto;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.site-footer {
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  text-align: center;
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+.site-footer p {
+  margin: 0 0 0.5rem;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-nav a {
+  color: #f6c23e;
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Buttons (shared) */
+#navbar nav a,
+#navbar nav button,
+.btn {
+  padding: 0.4rem 0.8rem;
+  background: #f6c23e;
+  color: #333;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+#navbar nav a:hover,
+#navbar nav button:hover,
+#navbar nav a:focus,
+#navbar nav button:focus,
+.btn:hover,
+.btn:focus {
+  background: #dda20a;
+  outline: none;
+}
+
+/* Page wrapper & cards */
+.app-content {
+  margin: 2rem auto;
+  max-width: 35vw;
+  padding: 2rem;
+  background: rgba(255,255,255,0.28);
+  border-radius: 55px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  z-index: 1;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+}
+.page-box {
+  width: 100%;
+  max-width: 600px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.page-box:first-child {
+  text-align: center;
+}
+
+/* Carousel */
+.carousel {
+  overflow: hidden;
+  width: 100%;
+  max-width: 600px;
+  margin: 1.5rem auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.carousel-inner {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+}
+.carousel-inner img {
+  flex-shrink: 0;
+  width: 100%;
+  display: block;
+}
+
