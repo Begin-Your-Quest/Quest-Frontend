@@ -3,7 +3,6 @@ import { Link, useNavigate } from "react-router";
 
 import { useAuth } from "./AuthContext";
 
-/** A form that allows users to register for a new account */
 export default function Register() {
   const { register } = useAuth();
   const navigate = useNavigate();
@@ -22,21 +21,35 @@ export default function Register() {
   };
 
   return (
-    <>
-      <h1>Register for an account</h1>
-      <form action={onRegister}>
-        <label>
-          Username
-          <input type="text" name="username" />
-        </label>
-        <label>
-          Password
-          <input type="password" name="password" required />
-        </label>
-        <button>Register</button>
-        {error && <output>{error}</output>}
-      </form>
-      <Link to="/login">Already have an account? Log in here.</Link>
-    </>
+    <div className="auth-page">
+      <div className="auth-card">
+        <h1 className="auth-title">Register for an account</h1>
+
+        <form className="auth-form" action={onRegister}>
+          <label className="auth-label">
+            Username
+            <input className="auth-input" type="text" name="username" />
+          </label>
+          <label className="auth-label">
+            Password
+            <input
+              className="auth-input"
+              type="password"
+              name="password"
+              required
+            />
+          </label>
+          <button type="submit" className="auth-button">
+            Register
+          </button>
+          {error && <output className="auth-error">{error}</output>}
+        </form>
+        <p className="auth-footer">
+          <Link className="auth-link" to="/login">
+            Already have an account? Log in here.
+          </Link>
+        </p>
+      </div>
+    </div>
   );
 }
