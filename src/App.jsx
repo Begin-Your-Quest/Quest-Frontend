@@ -9,6 +9,8 @@ import { OneCharacter } from "./characters/OneCharacter.jsx";
 import { NewCharacter } from "./characters/NewCharacter.jsx";
 import Sessions from "./sessions/sessions";
 import SessionById from "./sessions/SessionById.jsx";
+import { SkillsList } from "./skills/skillsList.jsx"
+
 
 
 export default function App() {
@@ -24,6 +26,7 @@ export default function App() {
           <Route path="/characters" element={<AllCharacters />}/>
           <Route path="/characters/:id" element={<OneCharacter />}/>
           <Route path="/characters/new" element={<NewCharacter />}/>
+          <Route path="/skills/list" element={<SkillsList />}/>
           <Route path="*" element={<p>Page not found</p>} />
         </Route>
       </Routes>
