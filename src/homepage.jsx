@@ -19,6 +19,15 @@ export default function HomePage() {
         <button onClick={() => navigate('/sessions')} className="btn">
           View Sessions
         </button>
+<<<<<<< Updated upstream
+=======
+        <button onClick={() => navigate('/characters')} className="btn">
+          View Characters
+        </button>
+                <button onClick={() => navigate('/skills/list')} className="btn">
+          View Skills
+        </button>
+>>>>>>> Stashed changes
       </div>
       <div className="page-box">
         <ImageCarousel images={slides} interval={3000} />

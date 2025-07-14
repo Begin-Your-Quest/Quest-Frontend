@@ -23,6 +23,10 @@ export default function App() {
           <Route path="/sessions/new" element={<CreateSessionPage />} />
           <Route path="/characters" element={<AllCharacters />}/>
           <Route path="/characters/:id" element={<OneCharacter />}/>
+<<<<<<< Updated upstream
+=======
+          <Route path="/characters/:id/edit" element={<EditCharacterForm />}/>
+>>>>>>> Stashed changes
           <Route path="/characters/new" element={<NewCharacter />}/>
           <Route path="*" element={<p>Page not found</p>} />
         </Route>
