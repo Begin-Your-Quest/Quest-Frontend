@@ -23,7 +23,6 @@ export default function HomePage() {
           View Characters
         </button>
         <button onClick={() => navigate('/skills/list')} className="btn">
-          View Skills
         </button>
       </div>
       <div className="page-box">
