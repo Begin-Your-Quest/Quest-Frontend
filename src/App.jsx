@@ -9,6 +9,8 @@ import { OneCharacter } from "./characters/OneCharacter.jsx";
 import { NewCharacter } from "./characters/NewCharacter.jsx";
 import Sessions from "./sessions/sessions";
 import SessionById from "./sessions/SessionById.jsx";
+import  SkillsList  from "./skills/skillsList.jsx";
+import { EditCharacterForm } from "./characters/EditCharacterForm.jsx";
 
 
 export default function App() {
@@ -23,11 +25,10 @@ export default function App() {
           <Route path="/sessions/new" element={<CreateSessionPage />} />
           <Route path="/characters" element={<AllCharacters />}/>
           <Route path="/characters/:id" element={<OneCharacter />}/>
-<<<<<<< Updated upstream
-=======
           <Route path="/characters/:id/edit" element={<EditCharacterForm />}/>
->>>>>>> Stashed changes
+          <Route path="/characters/:id/edit" element={<EditCharacterForm />}/>
           <Route path="/characters/new" element={<NewCharacter />}/>
+          <Route path="/skills/list" element={<SkillsList />}/>
           <Route path="*" element={<p>Page not found</p>} />
         </Route>
       </Routes>

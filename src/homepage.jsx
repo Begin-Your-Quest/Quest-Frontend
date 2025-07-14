@@ -22,9 +22,10 @@ export default function HomePage() {
         <button onClick={() => navigate('/characters')} className="btn">
           View Characters
         </button>
-                <button onClick={() => navigate('/skills/list')} className="btn">
-          View Skills
+        <button onClick={() => navigate('/skills/list')} className="btn">
+         View Skills
         </button>
+
       </div>
       <div className="page-box">
         <ImageCarousel images={slides} interval={3000} />
