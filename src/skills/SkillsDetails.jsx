@@ -1,7 +1,11 @@
-import { useParams } from "react-router";
+import { useParams, useNavigate } from "react-router";
 import useQuery from "../api/useQuery";
+import { useAuth } from "../auth/AuthContext";
+import useMutation from "../api/useMutation";
+
 
 export default function SkillDetails() {
+  const { token } = useAuth();
 const { id } = useParams();
 const {
   data: skill,
@@ -18,7 +22,28 @@ return (
     <p>{skill.magicPoints}</p>
     <p>{skill.damage}</p>
     <p>{skill.description}</p>
+    {token && <DeleteButton id={skill.id} />}
+
   </>
   );
 }
 
+function DeleteButton({ id }) {
+  const navigate = useNavigate();
+  const {
+    mutate: deleteSkill,
+    loading,
+    error,
+  } = useMutation("DELETE", "/skills/" + id, ["skills", "skill"]);
+
+  const onDeleteSkill = async () => {
+    const success = await deleteSkill();
+    if (success) navigate("/activities");
+  };
+
+  return (
+    <button onClick={onDeleteSkill}>
+      {loading ? "Deleting" : (error ?? "Delete")}
+    </button>
+  );
+}
