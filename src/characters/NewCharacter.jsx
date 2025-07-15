@@ -1,9 +1,24 @@
-
+import useMutation from "../api/useMutation";
+import { useNavigate } from "react-router";
 
 export const NewCharacter = () => {
+  const navigate = useNavigate();
+  const { mutate } = useMutation(`POST`, `/characters`, [`character`]);
+
+
+  const createCharacter = async (formData) => {
+    const name = formData.get("name");
+    const clas = formData.get("class");
+    const attack = formData.get("attack");
+    const health = formData.get("health");
+    const description = formData.get("description");
+    mutate({name,clas,attack,health,description});
+    navigate("/characters");
+  };
+
   return (
     <>
-      <form>
+      <form action={createCharacter}>
         <label>
           Character Name:
           <input type="text" name="name" required/>
