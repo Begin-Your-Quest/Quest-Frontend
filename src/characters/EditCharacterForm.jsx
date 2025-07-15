@@ -1,13 +1,13 @@
 import { useParams } from "react-router"
 import useQuery from "../api/useQuery";
 import useMutation from "../api/useMutation";
-//import { useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 
 export const EditCharacterForm = () => {
   const {id} = useParams();
   const { data: character } = useQuery(`/characters/${id}`, `character`);
   const { mutate } = useMutation(`PUT`, `/characters`, [`character`]);
-  //const navigate = useNavigate();
+  const navigate = useNavigate();
 
 
   const updateCharacter = async (formData) => {
@@ -16,8 +16,8 @@ export const EditCharacterForm = () => {
     const attack = formData.get("attack");
     const health = formData.get("health");
     const description = formData.get("description");
-    mutate({name,clas,attack,health,description,userId: character.user_id});
-    //navigate("/characters");
+    mutate({name,clas,attack,health,description,userId: character.user_id,id: character.id});
+    navigate("/characters");
   };
 
   if(!character) return null;
