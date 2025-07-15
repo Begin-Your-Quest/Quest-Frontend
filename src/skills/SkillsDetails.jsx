@@ -14,10 +14,10 @@ if(error || !skill) return <p>Sorry! {error}</p>;
 
 return (
   <>
-    <h1>{skill.name}</h1>
-    <p>{skill.magicPoints}</p>
-    <p>{skill.damage}</p>
-    <p>{skill.description}</p>
+      <h1>{skill.name}</h1>
+      <p>Magic: {skill.magic_points}</p>
+      <p>Damage: {skill.damage}</p>
+      {skill.description && <p>{skill.description}</p>}
   </>
   );
 }
