@@ -24,7 +24,7 @@ export const NewCharacter = () => {
           Hit Points:
           <input type="number" name="health" required/>
         </label>
-        <button>UPDATE CHARACTER</button>
+        <button>ADD NEW CHARACTER</button>
       </form>
     </>
   )
