@@ -24,3 +24,77 @@
 #addChar {
   background: #dda20a;
 }
+
+.singleChar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-rows: 1fr 1fr 1fr 3fr 3fr;
+  width:100%;
+  height: 75vh;
+  font-family: 'Press Start 2P', cursive;
+  color: black;
+}
+
+.singleChar *{
+  padding: 0.4rem 0.8rem;
+  margin: 5px;
+  background: rgba(246, 194, 62, .5); 
+  border: #f6c23e solid;
+  border-radius: 20px;
+  cursor: default;
+  justify-content: center;
+  align-content: center;
+}
+
+.singleChar h2 {
+  grid-column: 2/4;
+  grid-row: 1/2;
+}
+
+.singleChar h3 {
+  grid-column: 2/4;
+  grid-row: 2/3;
+}
+
+.singleChar img{
+  grid-column: 1/2;
+  grid-row: 1/3;
+}
+
+.singleChar ul {
+  grid-column: 1/4;
+  grid-row: 3/4;
+  list-style: none;
+  font-size: 12px;
+}
+
+.singleChar p {
+  grid-column: 1/4;
+  grid-row: 4/5;
+}
+
+.singleChar a {
+  grid-column: 3/4;
+  grid-row: 5/6;
+  text-decoration: none;
+  color: black;
+}
+
+.singleChar a:hover {
+  background: rgba(246, 194, 62, 1); 
+}
+
+.singleChar #skills{
+  grid-column: 1/3;
+  grid-row: 5/6;
+}
+
+#attack{
+  background: rgba(246, 0, 62, .5); 
+  border: rgb(246, 0, 62) solid;
+}
+
+#hp{
+  background: rgba(0, 200, 62, .5); 
+  border: rgb(0, 200, 62) solid;
+}
