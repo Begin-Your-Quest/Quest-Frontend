@@ -2,7 +2,6 @@ import { useParams, useNavigate } from "react-router";
 import useQuery from "../api/useQuery";
 import { useAuth } from "../auth/AuthContext";
 import useMutation from "../api/useMutation";
-
 import "./Skills.css";
 
 
@@ -18,7 +17,6 @@ const {
 if (loading) return <p>Loading...</p>;
 if(error || !skill) return <p>Sorry! {error}</p>;
 
-console.log(skill)
 return (
   <>
     <h1>{skill[0].name}</h1>
