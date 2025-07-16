@@ -9,6 +9,7 @@ import { OneCharacter } from "./characters/OneCharacter.jsx";
 import { NewCharacter } from "./characters/NewCharacter.jsx";
 import Sessions from "./sessions/sessions";
 import SessionById from "./sessions/SessionById.jsx";
+import AddCharacterSection from "./sessions/AddCharacterSection.jsx";
 
 
 export default function App() {
@@ -20,6 +21,8 @@ export default function App() {
           <Route path="login" element={<Login />} />
           <Route path="/sessions" element={<Sessions />} />
           <Route path="/sessions/:id" element={<SessionById />} />
+          <Route path="/sessions/:id/characters" element={<AddCharacterSection />} />
+
           <Route path="/sessions/new" element={<CreateSessionPage />} />
           <Route path="/characters" element={<AllCharacters />}/>
           <Route path="/characters/:id" element={<OneCharacter />}/>
