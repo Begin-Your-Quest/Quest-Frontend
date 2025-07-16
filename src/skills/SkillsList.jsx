@@ -15,9 +15,9 @@ if (error) return <p>Sorry! {error}</p>
 
 return (
   <ul>
-    {skills.map((skill) => {
-      <SkillListItem key={skill.id} skill={skill} />
-    })}
+ {skills.map(skill => (
+       <SkillListItem key={skill.id} skill={skill} />
+     ))}
   </ul>
   );
 }

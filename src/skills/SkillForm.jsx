@@ -2,6 +2,7 @@ import useMutation from "../api/useMutation";
 import "./Skills.css";
 
 
+/** Users can create new activities with a name and description. */
 export default function SkillForm() {
   const {
     mutate: add,
