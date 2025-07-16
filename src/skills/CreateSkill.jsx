@@ -1,10 +1,9 @@
 import useMutation from "../api/useMutation";
 import { useNavigate } from "react-router";
 
-export const NewSkill = () => {
+ export default function CreateSkill() {
   const navigate = useNavigate();
   const { mutate } = useMutation(`POST`, `/skills`, [`skill`]);
-
 
   const createSkill = async (formData) => {
     const name = formData.get("name");
@@ -39,3 +38,4 @@ export const NewSkill = () => {
     </>
   )
 }
+

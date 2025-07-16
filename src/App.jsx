@@ -13,7 +13,7 @@ import AddCharacterSection from "./sessions/AddCharacterSection.jsx";
 import  SkillsList  from "./skills/SkillsList.jsx";
 import  SkillsDetails from "./skills/SkillsDetails.jsx";
 import { EditCharacterForm } from "./characters/EditCharacterForm.jsx";
-import { NewSkill } from "./skills/CreateSkill.jsx";
+import CreateSkill from "./skills/CreateSkill.jsx";
 
 
 export default function App() {
@@ -34,7 +34,7 @@ export default function App() {
           <Route path="/characters/new" element={<NewCharacter />}/>
           <Route path="/skills" element={<SkillsList  />}/>
           <Route path="/skills/:id" element={<SkillsDetails/>}/>
-          <Route path="/skills/create" element={<NewSkill/>} />
+          <Route path="/skills/create" element={<CreateSkill/>} />
           
           <Route path="*" element={<p>Page not found</p>} />
         </Route>
