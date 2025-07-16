@@ -16,9 +16,9 @@ if(error || !job) return <p>Sorry! {error}</p>;
 return (
   <>
     <h1>{job.name}</h1>
-    <p>{job.magicPoints}</p>
-    <p>{job.damage}</p>
-    <p>{job.description}</p>
+    <p>Magic Points:{job.magicPoints}</p>
+    <p>Damage:{job.damage}</p>
+    <p>Description:{job.description}</p>
   </>
   );
 }
