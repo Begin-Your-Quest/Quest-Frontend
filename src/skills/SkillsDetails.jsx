@@ -3,6 +3,7 @@ import useQuery from "../api/useQuery";
 import { useAuth } from "../auth/AuthContext";
 import useMutation from "../api/useMutation";
 
+import "./Skills.css";
 
 
 export default function SkillsDetails() {
