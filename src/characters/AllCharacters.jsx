@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import "./characters.css";
 import useQuery  from "../api/useQuery.jsx";
 
 export const AllCharacters = () => {
