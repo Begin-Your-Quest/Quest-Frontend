@@ -30,10 +30,10 @@ export default function App() {
           <Route path="/characters" element={<AllCharacters />}/>
           <Route path="/characters/:id" element={<OneCharacter />}/>
           <Route path="/characters/:id/edit" element={<EditCharacterForm />}/>
-          <Route path="/characters/:id/edit" element={<EditCharacterForm />}/>
           <Route path="/characters/new" element={<NewCharacter />}/>
           <Route path="/skills" element={<SkillsList  />}/>
           <Route path="/skills/:id" element={<SkillsDetails/>}/>
+          <Route path="/skills/create" element={<NewSkill/>} />
           <Route path="*" element={<p>Page not found</p>} />
         </Route>
       </Routes>

@@ -1,5 +1,5 @@
 import SkillsList from "./SkillsList";
-import SkillForm from "./SkillForm";
+import CreateSkills from "./CreateSkills";
 import { useAuth } from "../auth/AuthContext";
 
 import "./Skills.css";
@@ -12,7 +12,7 @@ export default function SkillsPage() {
       <>
         <h1>Skills</h1>
         <SkillsList />
-        {token && <SkillForm />}
+        {token && <CreateSkills />}
       </>
   );
 }

@@ -5,8 +5,9 @@ import useMutation from "../api/useMutation";
 
 import "./Skills.css";
 
-export default function SkillDetails() {
-  const { token } = useAuth();
+
+export default function SkillsDetails() {
+const { token } = useAuth();
 const { id } = useParams();
 const {
   data: skill,
@@ -14,16 +15,19 @@ const {
   error,
 } = useQuery(`/skills/${id}`, "skill"); 
 
-console.log("skills")
 if (loading) return <p>Loading...</p>;
 if(error || !skill) return <p>Sorry! {error}</p>;
 
+console.log(skill)
 return (
   <>
-      <h1>{skill.name}</h1>
-      <p>Magic: {skill.magic_points}</p>
-      <p>Damage: {skill.damage}</p>
-      {skill.description && <p>{skill.description}</p>}
+    <h1>{skill[0].name}</h1>
+      <ul>
+      <li>MP: {skill[0].magic_points}</li>
+      <li>Damage: {skill[0].damage}</li>
+      <li>description: {skill[0].description}</li> 
+      </ul>
+      {token && <DeleteButton id={skill.id} />}
   </>
   );
 }
@@ -38,7 +42,7 @@ function DeleteButton({ id }) {
 
   const onDeleteSkill = async () => {
     const success = await deleteSkill();
-    if (success) navigate("/activities");
+    if (success) navigate("/skills");
   };
 
   return (

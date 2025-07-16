@@ -27,6 +27,10 @@ function SkillListItem({ skill }) {
     <li>
       <p>
         <Link to ={"/skills/" + skill.id}>{skill.name}</Link>
+        
+
+
+
       </p>
     </li>
   );
