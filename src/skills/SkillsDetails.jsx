@@ -7,8 +7,9 @@ const {
   data: skill,
   loading,
   error,
-} = useQuery(`/skills/${id}`, "skill");
+} = useQuery(`/skills/${id}`, "skill"); 
 
+console.log("skills")
 if (loading) return <p>Loading...</p>;
 if(error || !skill) return <p>Sorry! {error}</p>;
 
