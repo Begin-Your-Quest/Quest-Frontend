@@ -1,6 +1,7 @@
 import useQuery from "../api/useQuery";
 import { useParams } from "react-router";
 import SessionUpdateForm from "./SessionUpdateForm";
+import AddCharacterSection from "./AddCharacterSection";
 
 
 const SessionById = () => {
@@ -15,7 +16,9 @@ const SessionById = () => {
         <li> <b>Session date: </b>{session.date} </li>
         <li> <b>Dungeon Master:</b> ID: {session.dm_id} </li>
       </ul>
-      <button>ADD A CHARACTER</button>
+
+      <h2>Add a Character</h2>
+      <AddCharacterSection />
 
       <h2>Update Your Session</h2>
       <SessionUpdateForm session={session}/>
