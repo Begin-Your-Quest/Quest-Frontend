@@ -18,7 +18,6 @@ const {
 if (loading) return <p>Loading...</p>;
 if(error || !skill) return <p>Sorry! {error}</p>;
 
-console.log(skill)
 return (
   <>
     <h1>{skill[0].name}</h1>
