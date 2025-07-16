@@ -1,5 +1,11 @@
 import { useParams } from "react-router";
 import useQuery from "../api/useQuery";
+<<<<<<< Updated upstream
+=======
+import { useAuth } from "../auth/AuthContext";
+import useMutation from "../api/useMutation";
+>>>>>>> Stashed changes
+import "./Skills.css";
 
 export default function SkillDetails() {
 const { id } = useParams();

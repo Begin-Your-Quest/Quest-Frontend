@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import useQuery from "../api/useQuery"
-
+import "./Skills.css";
 
 export default function SkillsList() {
   const {
