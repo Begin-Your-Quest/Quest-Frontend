@@ -12,6 +12,7 @@ import SessionById from "./sessions/SessionById.jsx";
 import  SkillsList  from "./skills/SkillsList.jsx";
 import  SkillsDetails from "./skills/SkillsDetails.jsx";
 import { EditCharacterForm } from "./characters/EditCharacterForm.jsx";
+import { JobsPage } from "./jobs/JobsPage.jsx"
 
 
 export default function App() {
