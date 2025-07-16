@@ -9,11 +9,10 @@ import { OneCharacter } from "./characters/OneCharacter.jsx";
 import { NewCharacter } from "./characters/NewCharacter.jsx";
 import Sessions from "./sessions/sessions";
 import SessionById from "./sessions/SessionById.jsx";
-import  SkillsList  from "./skills/SkillsList.jsx";
-import  SkillsDetails from "./skills/SkillsDetails.jsx";
+import SkillsList  from "./skills/SkillsList.jsx";
+import SkillsDetails  from "./skills/SkillsDetails.jsx";
 import { EditCharacterForm } from "./characters/EditCharacterForm.jsx";
-import { JobsPage } from "./jobs/JobsPage.jsx"
-
+import { NewSkill } from "./skills/CreateSkills.jsx"
 
 export default function App() {
   return (
@@ -28,10 +27,10 @@ export default function App() {
           <Route path="/characters" element={<AllCharacters />}/>
           <Route path="/characters/:id" element={<OneCharacter />}/>
           <Route path="/characters/:id/edit" element={<EditCharacterForm />}/>
-          <Route path="/characters/:id/edit" element={<EditCharacterForm />}/>
           <Route path="/characters/new" element={<NewCharacter />}/>
           <Route path="/skills" element={<SkillsList  />}/>
           <Route path="/skills/:id" element={<SkillsDetails/>}/>
+          <Route path="/skills/create" element={<NewSkill/>} />
           <Route path="*" element={<p>Page not found</p>} />
         </Route>
       </Routes>
