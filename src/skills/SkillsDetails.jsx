@@ -17,10 +17,15 @@ const {
 if (loading) return <p>Loading...</p>;
 if(error || !skill) return <p>Sorry! {error}</p>;
 
+const imageName = skill[0].name.replace(/\s+/g, '_') + '.png';
+const imagePath = `/media/${imageName}`;
+
+
   return (
     <div className="skill-detail-card">
       <h1 className="skill-title">{skill[0].name}</h1>
       <ul className="skill-stats">
+        <li><img className="skill-image" src={imagePath} alt={skill[0].name} /></li>
         <li><strong>MP:</strong> {skill[0].magic_points}</li>
         <li><strong>Damage:</strong> {skill[0].damage}</li>
         <li><strong>Description:</strong> {skill[0].description}</li>
