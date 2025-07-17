@@ -10,7 +10,7 @@ html, body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Press Start 2P', cursive;
   font-size: 16px;
   line-height: 1.5;
   color: #333;
@@ -72,6 +72,7 @@ html, body {
 #navbar nav button,
 .btn {
   padding: 0.4rem 0.8rem;
+  font-family: 'Press Start 2P', cursive;
   background: #f6c23e; 
   color: #2f2f2f;   
   font-size: 0.9rem;

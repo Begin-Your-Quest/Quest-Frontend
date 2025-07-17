@@ -10,12 +10,14 @@ export default function Navbar() {
        <img src="/media/BYQlogo.png" alt="Begin Your Quest Logo" className="brand-logo" />
      </NavLink>
       <nav>
-        <NavLink to="/skills">Skills</NavLink>
         {token ? (
           <>
+            <NavLink to="/skills">Skills</NavLink>
+            <NavLink to="/skills/create">Create Skill</NavLink>
             <NavLink to="/sessions">Sessions</NavLink>
             <NavLink to="/characters">Characters</NavLink>
-            <button onClick={logout}>Log out</button>
+            <NavLink to="/discord/create">Discord</NavLink>
+            <button className="btn" onClick={logout}>Log out</button>
           </>
           
         ) : (

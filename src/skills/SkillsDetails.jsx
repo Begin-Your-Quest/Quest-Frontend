@@ -2,10 +2,11 @@ import { useParams, useNavigate } from "react-router";
 import useQuery from "../api/useQuery";
 import { useAuth } from "../auth/AuthContext";
 import useMutation from "../api/useMutation";
+import "./Skills.css";
 
 
-export default function SkillDetails() {
-  const { token } = useAuth();
+export default function SkillsDetails() {
+const { token } = useAuth();
 const { id } = useParams();
 const {
   data: skill,
@@ -13,17 +14,24 @@ const {
   error,
 } = useQuery(`/skills/${id}`, "skill"); 
 
-console.log("skills")
 if (loading) return <p>Loading...</p>;
 if(error || !skill) return <p>Sorry! {error}</p>;
 
-return (
-  <>
-      <h1>{skill.name}</h1>
-      <p>Magic: {skill.magic_points}</p>
-      <p>Damage: {skill.damage}</p>
-      {skill.description && <p>{skill.description}</p>}
-  </>
+const imageName = skill[0].name.replace(/\s+/g, '_') + '.png';
+const imagePath = `/media/${imageName}`;
+
+
+  return (
+    <div className="skill-detail-card">
+      <h1 className="skill-title">{skill[0].name}</h1>
+      <ul className="skill-stats">
+        <li><img className="skill-image" src={imagePath} alt={skill[0].name} /></li>
+        <li><strong>MP:</strong> {skill[0].magic_points}</li>
+        <li><strong>Damage:</strong> {skill[0].damage}</li>
+        <li><strong>Description:</strong> {skill[0].description}</li>
+      </ul>
+      {token && <DeleteButton id={skill[0].id} />}
+    </div>
   );
 }
 
@@ -37,12 +45,15 @@ function DeleteButton({ id }) {
 
   const onDeleteSkill = async () => {
     const success = await deleteSkill();
-    if (success) navigate("/activities");
+    if (success) navigate("/skills");
   };
 
   return (
-    <button onClick={onDeleteSkill}>
-      {loading ? "Deleting" : (error ?? "Delete")}
+      <button
+      className="skill-delete-btn"
+      onClick={onDeleteSkill}
+      disabled={loading} >
+      {loading ? "Deleting…" : "Delete"}
     </button>
   );
 }

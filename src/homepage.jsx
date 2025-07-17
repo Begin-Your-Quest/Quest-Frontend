@@ -16,15 +16,15 @@ export default function HomePage() {
     <div className="content">
       <div className="page-box">
         <h1>Welcome Adventurers</h1>
-        <button onClick={() => navigate('/sessions')} className="btn">
-          View Sessions
-        </button>
-        <button onClick={() => navigate('/characters')} className="btn">
-          View Characters
-        </button>
-        <button onClick={() => navigate('/skills')} className="btn">
-          View Skills
-        </button>
+        <p>
+          Begin Your Quest is a platform for tabletop RPG enthusiasts to create, manage, and share their adventures.
+          Whether you're a seasoned Dungeon Master or a new player, BYQ has tools to enhance your gaming experience.  
+          <br />
+          <br />
+          <button className="btn" onClick={() => navigate("/register")}>
+            BEGIN YOUR QUEST
+          </button>
+        </p>
       </div>
       <div className="page-box">
         <ImageCarousel images={slides} interval={3000} />

@@ -13,7 +13,9 @@ import AddCharacterSection from "./sessions/AddCharacterSection.jsx";
 import  SkillsList  from "./skills/SkillsList.jsx";
 import  SkillsDetails from "./skills/SkillsDetails.jsx";
 import { EditCharacterForm } from "./characters/EditCharacterForm.jsx";
-
+import CreateSkill from "./skills/CreateSkill.jsx";
+import DiscordCreateForm from "./discord/DiscordCreateForm.jsx";
+import DiscordInviteLink from "./discord/DiscordInviteLink.jsx";
 
 export default function App() {
   return (
@@ -25,15 +27,18 @@ export default function App() {
           <Route path="/sessions" element={<Sessions />} />
           <Route path="/sessions/:id" element={<SessionById />} />
           <Route path="/sessions/:id/characters" element={<AddCharacterSection />} />
-
           <Route path="/sessions/new" element={<CreateSessionPage />} />
           <Route path="/characters" element={<AllCharacters />}/>
           <Route path="/characters/:id" element={<OneCharacter />}/>
           <Route path="/characters/:id/edit" element={<EditCharacterForm />}/>
-          <Route path="/characters/:id/edit" element={<EditCharacterForm />}/>
           <Route path="/characters/new" element={<NewCharacter />}/>
           <Route path="/skills" element={<SkillsList  />}/>
           <Route path="/skills/:id" element={<SkillsDetails/>}/>
+          <Route path="/skills/create" element={<CreateSkill/>} />  
+          <Route path="/discord/create" element={<DiscordCreateForm />} />
+          <Route path="/discord/invite" element={<DiscordInviteLink />} />
+          
+          {/* Catch-all route for 404 */} 
           <Route path="*" element={<p>Page not found</p>} />
         </Route>
       </Routes>

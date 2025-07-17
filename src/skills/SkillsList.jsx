@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import useQuery from "../api/useQuery"
-
+import "./Skills.css";
 
 export default function SkillsList() {
   const {
@@ -13,21 +13,17 @@ export default function SkillsList() {
 if (loading || !skills) return <p>Loading...</p>
 if (error) return <p>Sorry! {error}</p>
 
-return (
-  <ul>
- {skills.map(skill => (
-       <SkillListItem key={skill.id} skill={skill} />
-     ))}
-  </ul>
-  );
-}
-
-function SkillListItem({ skill }) {
-  return (
-    <li>
-      <p>
-        <Link to ={"/skills/" + skill.id}>{skill.name}</Link>
-      </p>
-    </li>
+ return (
+    <ul className="skills-list">
+      {skills.map(skill => (
+        <li key={skill.id} className="skill-item">
+          <Link
+            to={`/skills/${skill.id}`}
+            className="skill-btn">
+            {skill.name}
+          </Link>
+        </li>
+      ))}
+    </ul>
   );
 }
