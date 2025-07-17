@@ -1,0 +1,82 @@
+.sessions a{
+  text-decoration: none;
+  margin: 1px;
+}
+
+.sessionName {
+  color: black;
+  padding: 2px;
+  background: #f6c23e;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.sessionName:hover {
+  background-color: #dda20a;
+}
+
+.addSection {
+  display: flex;
+  flex-direction: column;
+  margin: 5px
+}
+
+.addSection input {
+  margin: 0px 0px 10px 3px;
+  height: 25px;
+}
+
+.addSection button {
+  background: #dda20a;
+  height: 2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+}
+
+.addSection button:hover {
+  background: #f6c23e;
+  cursor: pointer;
+}
+
+li {
+  list-style-type: none;
+}
+
+.sessionDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-bottom: 5px;
+}
+
+.updateSession {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.updateSession input {
+  height: 25px;
+}
+
+.updateSession button {
+  background: #dda20a;
+  height: 2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.usersCharacter a {
+  text-decoration: none;
+  border: 1px solid #f6c23e;
+  padding: 8px;
+  background-color: #f6c23e;
+  color: black;
+}
+
+.usersCharacter {
+  padding: 10px;
+}

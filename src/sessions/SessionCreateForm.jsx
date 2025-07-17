@@ -12,19 +12,19 @@ const SessionCreateForm = () => {
 
   return (
     <>
-      <form action={createSession}>
+      <form action={createSession} className="addSection">
         <label>
           Dungeon Master ID:
-          <input type="number" min="0" name="dmId" required/>
         </label>
+        <input type="number" min="0" name="dmId" required/>
         <label>
           Session Name:
-          <input type="text" name="name" required/>
         </label>
+        <input type="text" name="name" required/>
         <label>
           Session Date:
-          <input type="date" name="date" required/>
         </label>
+        <input type="date" name="date" required/>
         <button>CREATE SESSION</button>
       </form>
     </>

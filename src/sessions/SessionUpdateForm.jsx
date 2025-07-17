@@ -14,15 +14,15 @@ const SessionUpdateForm = ({ session }) => {
 
   return (
     <>
-      <form action={updateSession}>
+      <form action={updateSession} className="updateSession">
         <label>
           Session Name:
-          <input type="text" name="name" required/>
         </label>
+        <input type="text" name="name" required/>
         <label>
           Session Date:
-          <input type="date" name="date" required/>
         </label>
+        <input type="date" name="date" required/>
         <button>UPDATE SESSION</button>
       </form>
 
