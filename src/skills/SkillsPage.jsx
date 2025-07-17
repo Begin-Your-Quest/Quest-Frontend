@@ -1,6 +1,6 @@
 import SkillsList from "./SkillsList";
-import CreateSkill from "./CreateSkill";
-// import { Link } from "react-router"
+// import CreateSkill from "./CreateSkill";
+import { Link } from "react-router"
 
 
 import "./Skills.css";
@@ -12,8 +12,8 @@ export default function SkillsPage() {
       <>
         <h1>Skills</h1>
         <SkillsList />
-        {/* <nav><Link to={`/skills/${NewSkill}`}>{NewSkill}</Link></nav> */}
-        <CreateSkill />
+        <Link to={`/skills/create`}>create skill</Link>
+        {/* <CreateSkill /> */}
       </>
   );
 }
