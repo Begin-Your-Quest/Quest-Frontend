@@ -14,28 +14,36 @@ import { useNavigate } from "react-router";
     navigate("/skills");
   };
 
-  return (
-    <>
-      <form action={createSkill}>
+    return (
+    <div className="skill-detail-card">
+      <h1 className="skill-title">Create New Skill</h1>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          createSkill(new FormData(e.target));
+        }}
+        className="skill-form"
+      >
         <label>
-          skill Name:
-          <input type="text" name="name" required/>
+          Skill Name:
+          <input type="text" name="name" required />
         </label>
         <label>
-          skill Magic Points:
-          <input type="number" name="magic_points" required/>
+          Magic Points:
+          <input type="number" name="magic_points" required />
         </label>
         <label>
           Damage:
-          <input type="number" name="damage" required/>
+          <input type="number" name="damage" required />
         </label>
         <label>
           Description:
-          <input type="text" name="description" required/>
+          <input type="text" name="description" required />
         </label>
-        <button>Create New Skill</button>
+        <button type="submit" className="skill-btn">
+          Create New Skill
+        </button>
       </form>
-    </>
-  )
+    </div>
+  );
 }
-
