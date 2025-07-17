@@ -29,7 +29,7 @@ const AddCharacterSection = () => {
     <>
       <h3>Select Your Characters</h3>
 
-      <ul>
+      <ul className="usersCharacter">
         {
           usersCharacters &&
 
