@@ -25,6 +25,9 @@ export default function HomePage() {
         <button onClick={() => navigate('/skills')} className="btn">
           View Skills
         </button>
+         <button onClick={() => navigate('/discord/create')} className="btn">
+          Discord
+        </button>
       </div>
       <div className="page-box">
         <ImageCarousel images={slides} interval={3000} />
