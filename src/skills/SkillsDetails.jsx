@@ -17,16 +17,16 @@ const {
 if (loading) return <p>Loading...</p>;
 if(error || !skill) return <p>Sorry! {error}</p>;
 
-return (
-  <>
-    <h1>{skill[0].name}</h1>
-      <ul>
-      <li>MP: {skill[0].magic_points}</li>
-      <li>Damage: {skill[0].damage}</li>
-      <li>description: {skill[0].description}</li> 
+  return (
+    <div className="skill-detail-card">
+      <h1 className="skill-title">{skill[0].name}</h1>
+      <ul className="skill-stats">
+        <li><strong>MP:</strong> {skill[0].magic_points}</li>
+        <li><strong>Damage:</strong> {skill[0].damage}</li>
+        <li><strong>Description:</strong> {skill[0].description}</li>
       </ul>
-      {token && <DeleteButton id={skill.id} />}
-  </>
+      {token && <DeleteButton id={skill[0].id} />}
+    </div>
   );
 }
 
@@ -44,8 +44,11 @@ function DeleteButton({ id }) {
   };
 
   return (
-    <button onClick={onDeleteSkill}>
-      {loading ? "Deleting" : (error ?? "Delete")}
+    <button
+      className="skill-delete-btn"
+      onClick={onDeleteSkill}
+      disabled={loading} >
+      {loading ? "Deleting…" : "Delete"}
     </button>
   );
 }
