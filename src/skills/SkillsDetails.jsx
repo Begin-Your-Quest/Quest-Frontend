@@ -49,7 +49,7 @@ function DeleteButton({ id }) {
   };
 
   return (
-    <button
+      <button
       className="skill-delete-btn"
       onClick={onDeleteSkill}
       disabled={loading} >

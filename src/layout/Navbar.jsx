@@ -13,6 +13,7 @@ export default function Navbar() {
         {token ? (
           <>
             <NavLink to="/skills">Skills</NavLink>
+            <NavLink to="/skills/create">Create Skill</NavLink>
             <NavLink to="/sessions">Sessions</NavLink>
             <NavLink to="/characters">Characters</NavLink>
             <NavLink to="/discord/create">Discord</NavLink>
