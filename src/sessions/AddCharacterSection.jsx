@@ -1,6 +1,8 @@
 import useQuery from "/src/api/useQuery";
 import { useParams } from "react-router";
 import useMutation from "../api/useMutation";
+import toastr from "toastr";
+import 'toastr/build/toastr.min.css'
 
 
 const AddCharacterSection = () => {
@@ -10,7 +12,8 @@ const AddCharacterSection = () => {
   const { mutate, error} = useMutation(`POST`, `/sessions/${id}/characters`, [`characters`, `sessionCharacters`]);
   
   if(error && error.includes(`already exists`)) {
-    alert(`CHARACTER ALREADY IN SESSION`)
+    toastr.options.positionClass = `toast-top-center`;
+    toastr.warning(`CHARACTER ALREADY IN A SESSION`);
   };
   
   const eventHandler = (event, character) => {
