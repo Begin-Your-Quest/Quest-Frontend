@@ -1,5 +1,5 @@
 import useMutation from "../api/useMutation";
-import { useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router";
 
 export const NewCharacter = () => {
   const navigate = useNavigate();
@@ -18,28 +18,26 @@ export const NewCharacter = () => {
 
   return (
     <>
-      <form action={createCharacter}>
-        <label>
-          Character Name:
+      <Link to={"/characters"} className="back-arrow">← Back</Link>
+      <form className="updateForm" action={createCharacter}>
+        <label id="name">Name: 
           <input type="text" name="name" required/>
         </label>
-        <label>
-          Character class:
+        <label id="class">Class: 
           <input type="text" name="class" required/>
         </label>
-        <label>
-          Description:
-          <input type="text" name="description" required/>
+        <label id="description">Description: 
+           <textarea name="description" required rows={2} />
         </label>
-        <label>
-          Attack:
-          <input type="number" name="attack" required/>
-        </label>
-        <label>
-          Hit Points:
-          <input type="number" name="health" required/>
-        </label>
-        <button>ADD NEW CHARACTER</button>
+        <div className="statRow">
+          <label htmlFor="attack">Attack:</label>
+          <input type="number" id="attack" name="attack" required />
+        </div>
+        <div className="statRow">
+          <label htmlFor="hp">Hit Points:</label>
+          <input type="number" id="hp" name="health" required />
+        </div>
+        <button id="updateButton">CREATE CHARACTER</button>
       </form>
     </>
   )
