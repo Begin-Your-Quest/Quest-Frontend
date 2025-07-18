@@ -87,3 +87,17 @@ li {
   background: #dda20a;
   cursor: pointer;
 }
+
+.removeButton {
+  background:  #f6c23e;
+  border: none;
+  border-radius: 4px;
+  margin: 5px;
+  padding: 7px 20px;
+  font-weight: bolder;
+}
+
+.removeButton:hover {
+  background: #dda20a;
+  cursor: pointer;
+}
