@@ -1,7 +1,7 @@
 import { useParams } from "react-router"
 import useQuery from "../api/useQuery";
 import useMutation from "../api/useMutation";
-import { useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router";
 
 export const EditCharacterForm = () => {
   const {id} = useParams();
@@ -24,28 +24,26 @@ export const EditCharacterForm = () => {
 
   return (
     <>
-      <form action={updateCharacter}>
-        <label>
-          Character Name:
+      <form className="updateForm" action={updateCharacter}>
+        <Link to={"/characters"} className="back-arrow">← Back</Link>
+        <label id="name">Name: 
           <input type="text" defaultValue={character.name} name="name" required/>
         </label>
-        <label>
-          Character class:
+        <label id="class">Class: 
           <input type="text" defaultValue={character.class} name="class" required/>
         </label>
-        <label>
-          Description:
-          <input type="text" defaultValue={character.description} name="description" required/>
+        <label id="description">Description: 
+           <textarea defaultValue={character.description} name="description" required rows={2} />
         </label>
-        <label>
-          Attack:
-          <input type="number" defaultValue={character.attack_stat} name="attack" required/>
-        </label>
-        <label>
-          Hit Points:
-          <input type="number" defaultValue={character.health_stat} name="health" required/>
-        </label>
-        <button>UPDATE CHARACTER</button>
+        <div className="statRow">
+          <label htmlFor="attack">Attack:</label>
+          <input type="number" id="attack" defaultValue={character.attack_stat} name="attack" required />
+        </div>
+        <div className="statRow">
+          <label htmlFor="hp">Hit Points:</label>
+          <input type="number" id="hp" defaultValue={character.health_stat} name="health" required />
+        </div>
+        <button id="updateButton">UPDATE CHARACTER</button>
       </form>
     </>
   )

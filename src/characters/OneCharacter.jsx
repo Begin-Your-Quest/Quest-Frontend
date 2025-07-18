@@ -9,8 +9,7 @@ export const OneCharacter = () => {
   return(
     <section className="singleChar">
       <h2>{character.name}</h2>
-      <h3>{character.class}</h3>
-      <img src="" alt="Char Img"/>
+      <h3>Class: {character.class}</h3>
       <ul>
         <li id="attack">Attack: {character.attack_stat}</li>
         <li id="hp">Hit Points: {character.health_stat}</li>

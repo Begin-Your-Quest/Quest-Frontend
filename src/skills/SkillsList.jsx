@@ -9,6 +9,8 @@ export default function SkillsList() {
     error,
   } = useQuery("/skills", "skills");
 
+  console.log(skills);
+
 
 if (loading || !skills) return <p>Loading...</p>
 if (error) return <p>Sorry! {error}</p>

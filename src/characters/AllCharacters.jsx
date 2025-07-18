@@ -10,14 +10,22 @@ export const AllCharacters = () => {
   return (
     <section>
       <h1>Characters</h1>
-      <ul className="allChars">
-        <Link to={'/characters/new'} id="addChar">+</Link>
-        {characters && characters.map((character) => {
-          return (
-            <Link to={`/characters/${character.id}`} key={character.id}>{character.name}</Link>
-          )
-        })}
-      </ul>
+
+      <div className="charGridWrapper">
+        <div className="charTile addCharTile">
+          <Link to="/characters/new">
+            <img src="/media/Add.png" alt="Add Character" />
+          </Link>
+        </div>
+
+        <div className="charGrid">
+          {characters && characters.map((character) => (
+            <Link to={`/characters/${character.id}`} key={character.id} className="charTile">
+              <span>{character.name}</span>
+            </Link>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
