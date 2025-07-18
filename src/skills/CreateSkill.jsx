@@ -15,35 +15,37 @@ import { useNavigate } from "react-router";
   };
 
     return (
-    <div className="skill-detail-card">
-      <h1 className="skill-title">Create New Skill</h1>
+     <div className="discord-page">
+      <div className="skill-detail-card">
+        <h1 className="skill-title">Create New Skill</h1>
       <form
         onSubmit={(e) => {
           e.preventDefault();
           createSkill(new FormData(e.target));
         }}
-        className="skill-form"
+        className="discord-form"
       >
-        <label>
+        <label className="discord-label">
           Skill Name:
-          <input type="text" name="name" required />
+          <input type="text" name="name" className="discord-input" required />
         </label>
-        <label>
+        <label className="discord-label">
           Magic Points:
-          <input type="number" name="magic_points" required />
+          <input type="number" name="magic_points" className="discord-input" required />
         </label>
-        <label>
+        <label className="discord-label">
           Damage:
-          <input type="number" name="damage" required />
+          <input type="number" name="damage" className="discord-input" required />
         </label>
-        <label>
+        <label className="discord-label">
           Description:
-          <input type="text" name="description" required />
+          <input type="text" name="description" className="discord-input" required />
         </label>
-        <button type="submit" className="skill-btn">
+        <button type="submit" className="discord-button">
           Create New Skill
         </button>
       </form>
+      </div>
     </div>
   );
 }
