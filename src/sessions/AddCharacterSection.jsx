@@ -2,7 +2,8 @@ import useQuery from "/src/api/useQuery";
 import { useParams } from "react-router";
 import useMutation from "../api/useMutation";
 import toastr from "toastr";
-import 'toastr/build/toastr.min.css'
+import 'toastr/build/toastr.min.css';
+import RemoveButton from "./RemoveButton";
 
 
 const AddCharacterSection = () => {
@@ -55,7 +56,10 @@ const AddCharacterSection = () => {
           
           characters.map((character) => {
             return (
-              <li key={character.id}>{character.name}</li>
+              <li key={character.id}>
+                {character.name}
+                <RemoveButton character={character}/>
+              </li>
             )
           })
         }

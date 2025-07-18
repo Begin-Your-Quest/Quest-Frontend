@@ -14,7 +14,7 @@ const Sessions = () => {
 
         allSessions.map((session) => {
           return (
-            <Link to={`/sessions/${session.id}`}>
+            <Link to={`/sessions/${session.id}`} key={session.id}>
               <h3 className='sessionName'>{session.name}</h3>
             </Link>
           )
