@@ -16,6 +16,7 @@ import { EditCharacterForm } from "./characters/EditCharacterForm.jsx";
 import CreateSkill from "./skills/CreateSkill.jsx";
 import DiscordCreateForm from "./discord/DiscordCreateForm.jsx";
 import DiscordInviteLink from "./discord/DiscordInviteLink.jsx";
+import SelectSkillSection from "./characters/SelectSkillsSection.jsx";
 
 export default function App() {
   return (
@@ -31,6 +32,7 @@ export default function App() {
           <Route path="/characters" element={<AllCharacters />}/>
           <Route path="/characters/:id" element={<OneCharacter />}/>
           <Route path="/characters/:id/edit" element={<EditCharacterForm />}/>
+          <Route path="/characters/:id/skills" element={<SelectSkillSection />}/>
           <Route path="/characters/new" element={<NewCharacter />}/>
           <Route path="/skills" element={<SkillsList  />}/>
           <Route path="/skills/:id" element={<SkillsDetails/>}/>

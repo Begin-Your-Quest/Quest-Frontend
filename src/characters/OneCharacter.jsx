@@ -8,6 +8,7 @@ export const OneCharacter = () => {
   if(!character) return null;
   return(
     <section className="singleChar">
+      <Link to={"/characters"} className="back-arrow">← Back</Link>
       <h2>{character.name}</h2>
       <h3>Class: {character.class}</h3>
       <ul>
@@ -15,7 +16,7 @@ export const OneCharacter = () => {
         <li id="hp">Hit Points: {character.health_stat}</li>
       </ul>
       <p>{character.description}</p>
-      <section id="skills">Skills</section>
+      <Link to={`/characters/${character.id}/skills`} id='skills'>Skills</Link>
       <Link to={`/characters/${character.id}/edit`}>EDIT</Link>
     </section>
   );
