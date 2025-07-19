@@ -25,7 +25,7 @@ export const EditCharacterForm = () => {
   return (
     <>
       <form className="updateForm" action={updateCharacter}>
-        <Link to={"/characters"} className="back-arrow">← Back</Link>
+        <Link to={`/characters/${character.id}`} className="back-arrow">← Back</Link>
         <label id="name">Name: 
           <input type="text" defaultValue={character.name} name="name" required/>
         </label>
