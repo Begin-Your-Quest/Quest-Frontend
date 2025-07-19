@@ -7,7 +7,7 @@ import CreateSessionPage from "./sessions/createSessionPage.jsx";
 import { AllCharacters } from "./characters/AllCharacters.jsx";
 import { OneCharacter } from "./characters/OneCharacter.jsx";
 import { NewCharacter } from "./characters/NewCharacter.jsx";
-import Sessions from "./sessions/sessions";
+import Sessions from "./sessions/Sessions.jsx";
 import SessionById from "./sessions/SessionById.jsx";
 import AddCharacterSection from "./sessions/AddCharacterSection.jsx";
 import  SkillsList  from "./skills/SkillsList.jsx";
