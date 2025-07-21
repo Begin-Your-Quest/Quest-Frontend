@@ -27,6 +27,7 @@
 }
 
 .addSection button {
+  font-family: 'Press Start 2P', cursive;
   background: #dda20a;
   height: 2rem;
   font-weight: bold;
@@ -61,6 +62,7 @@ li {
 }
 
 .updateSession button {
+  font-family: 'Press Start 2P', cursive;
   background: #dda20a;
   height: 2rem;
   font-weight: bold;
@@ -89,6 +91,7 @@ li {
 }
 
 .removeButton {
+  font-family: 'Press Start 2P', cursive;
   background:  #f6c23e;
   border: none;
   border-radius: 4px;
